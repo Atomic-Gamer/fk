@@ -50,9 +50,8 @@ function payNow(upi_address,upi2,upi3) {
         case 'gpay':
             redirect_url = "tez://upi/pay?pa=" + upi_address + "&pn=Shop&purpose=00&am=" + amt + "&cu=INR&sign=AAuN7izDWN5cb8A5scnUiNME+LkZqI2DWgkXlN1McoP6WZABa/KkFTiLvuPRP6/nWK8BPg/rPhb+u4QMrUEX10UsANTDbJaALcSM9b8Wk218X+55T/zOzb7xoiB+BcX8yYuYayELImXJHIgL/c7nkAnHrwUCmbM97nRbCVVRvU0ku3Tr";
             break;
-
         case 'phonepe':
-            redirect_url = "phonepe://pay?pa=" + upi_address + "&pn=Shop&purpose=00&am=" + amt + "&cu=INR&sign=AAuN7izDWN5cb8A5scnUiNME+LkZqI2DWgkXlN1McoP6WZABa/KkFTiLvuPRP6/nWK8BPg/rPhb+u4QMrUEX10UsANTDbJaALcSM9b8Wk218X+55T/zOzb7xoiB+BcX8yYuYayELImXJHIgL/c7nkAnHrwUCmbM97nRbCVVRvU0ku3Tr";
+            redirect_url = "upi://pay?pa=" + upi_address + "&pn=" + site_name + "&am=" + amt + "&cu=INR&tn=" + site_name;
             break;
 
         case 'paytm':
@@ -73,8 +72,8 @@ function payNow(upi_address,upi2,upi3) {
     window.location.href = redirect_url;
 }
 
-document.getElementById("mrp").innerHTML = '₹'+new Intl.NumberFormat().format(localStorage.getItem("price"))+ '.00';
-document.getElementById("selling_price").innerHTML = '₹'+new Intl.NumberFormat().format(localStorage.getItem("price"))+ '.00';
+document.getElementById("mrp").innerHTML = 'â‚¹'+new Intl.NumberFormat().format(localStorage.getItem("price"))+ '.00';
+document.getElementById("selling_price").innerHTML = 'â‚¹'+new Intl.NumberFormat().format(localStorage.getItem("price"))+ '.00';
 
-document.getElementById("mrp-footer").innerHTML = '₹'+new Intl.NumberFormat().format(localStorage.getItem("mrp"))+ '.00';
-document.getElementById("selling_price-footer").innerHTML = '₹'+new Intl.NumberFormat().format(localStorage.getItem("price"))+ '.00';
+document.getElementById("mrp-footer").innerHTML = 'â‚¹'+new Intl.NumberFormat().format(localStorage.getItem("mrp"))+ '.00';
+document.getElementById("selling_price-footer").innerHTML = 'â‚¹'+new Intl.NumberFormat().format(localStorage.getItem("price"))+ '.00';
