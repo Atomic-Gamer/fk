@@ -34,10 +34,10 @@ async function get_product_list(data, currentPageNumber) {
                                 <div class="_24B_AU _3SexMn">${value.name}</div>
                                 <div class="_24B_AU _1AQnZC">
                                     ${100 - ((value.selling_price * 100) / value.mrp).toFixed(0)}% Off
-                                    <span class="mrp">₹${value.mrp}</span>
+                                    <span class="mrp">â‚¹${value.mrp}</span>
                                 </div>
                                 <div class="_24B_AU _1AQnZC">
-                                    <b class="selling-price">₹${value.selling_price}</b>
+                                    <b class="selling-price">â‚¹${value.selling_price}</b>
                                     <img src="${MAIN_URL}img/SwOvZ3r.png" width="77px">
                                 </div>
                                 <div class="_3Nxu4r delivery-txt">Free Delivery in Two Days</div>
